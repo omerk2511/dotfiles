@@ -1,0 +1,7 @@
+[user]
+	name = Omer Katz
+	email = omerk2511@gmail.com
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[core]
+	editor = vim
