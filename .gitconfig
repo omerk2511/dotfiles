@@ -5,3 +5,24 @@
 	insteadOf = https://github.com/
 [core]
 	editor = vim
+	whitespace = -trailing-space
+[alias]
+	ci = commit
+	co = checkout
+	st = status
+	ap = add -p
+	lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
+	oops = commit --amend --no-edit
+	push-with-lease = push --force-with-lease
+	rebase-with-hooks = rebase -x 'git reset --soft HEAD~1 && git commit -C HEAD@{1}'
+	review-local = "!git lg @{push}.."
+	reword = commit --amend
+	uncommit = reset --soft HEAD~1
+	untrack = rm --cache --
+	aliases = !git config --get-regexp alias | sed -re 's/alias\\.(\\S*)\\s(.*)$/\\1 = \\2/g'
+[diff]
+	mnemonicPrefix = true
+	renames = true
+	wordRegex = .
+	submodule = log
+
