@@ -58,6 +58,8 @@ mkdir_cd() {
 }
 alias mkcd=mkdir_cd
 
+alias launch=xdg-open
+
 if [ -z "$TMUX" ]
 then
 	    tmux attach -t m4gnumx || tmux new -s m4gnumx
