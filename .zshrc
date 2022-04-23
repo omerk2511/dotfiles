@@ -34,7 +34,8 @@ export ALIEN_THEME="bnw"
 
 source ~/alien/alien.zsh
 
-export EDITR="vim"
+export EDITOR="vim"
+export DISPLAY=":0"
 
 if [ -f '/home/omerk/google-cloud-sdk/path.zsh.inc' ]; then . '/home/omerk/google-cloud-sdk/path.zsh.inc'; fi
 if [ -f '/home/omerk/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/omerk/google-cloud-sdk/completion.zsh.inc'; fi
@@ -59,6 +60,8 @@ mkdir_cd() {
 alias mkcd=mkdir_cd
 
 alias launch=xdg-open
+
+alias gentags='ctags -R --exclude=.git'
 
 if [ -z "$TMUX" ]
 then
